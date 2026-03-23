@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jalaj Parmar — Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/src/style.css"/>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">JP<span class="accent">.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Stack</a>
+      <a href="#projects">Work</a>
+      <a href="#certificates">Certs</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="mailto:parmarjalaj340@gmail.com" class="nav-cta">Hire Me</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-tag"><span class="tag-line"></span>Fullstack Developer</div>
+      <h1 class="hero-name">
+        <span class="name-line" data-text="JALAJ">JALAJ</span>
+        <span class="name-line accent-line" data-text="PARMAR">PARMAR</span>
+      </h1>
+      <p class="hero-subtitle">Building <em>digital experiences</em> that matter</p>
+      <p class="hero-desc">
+        Final year B.Tech student at LPU — crafting performant, scalable web apps 
+        with React, Node.js, and a deep love for clean architecture.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+      <div class="hero-social-row">
+        <a href="https://github.com/jalaj0011" target="_blank" class="social-link">GH</a>
+        <div class="social-sep"></div>
+        <a href="https://www.linkedin.com/in/jalaj-parmar0/" target="_blank" class="social-link">LI</a>
+        <div class="social-sep"></div>
+        <a href="tel:+918307128596" class="social-link">+91 83071 28596</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-outer" id="photoFrame">
+        <!-- Spinning orbit rings (Three.js canvas) -->
+        <canvas id="photo-canvas"></canvas>
+        <!-- Glow blob -->
+        <div class="photo-glow"></div>
+        <!-- Spinning dashed ring -->
+        <div class="photo-ring-dash"></div>
+        <!-- Accent solid ring -->
+        <div class="photo-ring-solid"></div>
+        <!-- The circular photo -->
+        <div class="photo-circle-wrap">
+          <img src="/jalaj.jpg" alt="Jalaj Parmar" class="hero-photo" id="heroPhoto"/>
+        </div>
+        <!-- Floating skill pills -->
+        <div class="photo-tag photo-tag-1"><span class="mono">⚡ React</span></div>
+        <div class="photo-tag photo-tag-2"><span class="mono">🔧 Node.js</span></div>
+        <div class="photo-tag photo-tag-3"><span class="mono">🎓 LPU · B.Tech</span></div>
+        <div class="photo-tag photo-tag-4"><span class="mono">☕ Java</span></div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span class="mono">scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-number mono">01</div>
+      <div class="section-label mono">About Me</div>
+      <h2 class="section-heading">The Developer<br/><em>behind the code</em></h2>
+      <div class="about-body">
+        <p>I'm <strong>Jalaj Parmar</strong>, a passionate Fullstack Developer currently pursuing B.Tech in Computer Science & Engineering at Lovely Professional University. With hands-on experience in both front-end and back-end development, I love turning ideas into robust digital products.</p>
+        <p>When I'm not coding, I'm learning — always chasing that next clean solution to a complex problem.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><div class="stat-num">3+</div><div class="stat-label mono">Years Coding</div></div>
+        <div class="stat"><div class="stat-num">10+</div><div class="stat-label mono">Projects Built</div></div>
+        <div class="stat"><div class="stat-num">5+</div><div class="stat-label mono">Tech Stacks</div></div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <canvas id="about-canvas"></canvas>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label mono">02 — Tech Stack</div>
+    <h2 class="section-heading">What I<br/><em>work with</em></h2>
+
+    <div class="skills-ticker-wrap">
+      <div class="skills-ticker" id="skillsTicker">
+        <span class="mono">React</span><span class="ticker-dot">✦</span>
+        <span class="mono">Node.js</span><span class="ticker-dot">✦</span>
+        <span class="mono">MongoDB</span><span class="ticker-dot">✦</span>
+        <span class="mono">Express.js</span><span class="ticker-dot">✦</span>
+        <span class="mono">JavaScript</span><span class="ticker-dot">✦</span>
+        <span class="mono">Java</span><span class="ticker-dot">✦</span>
+        <span class="mono">Python</span><span class="ticker-dot">✦</span>
+        <span class="mono">MySQL</span><span class="ticker-dot">✦</span>
+        <span class="mono">C++</span><span class="ticker-dot">✦</span>
+        <span class="mono">REST APIs</span><span class="ticker-dot">✦</span>
+        <span class="mono">React</span><span class="ticker-dot">✦</span>
+        <span class="mono">Node.js</span><span class="ticker-dot">✦</span>
+        <span class="mono">MongoDB</span><span class="ticker-dot">✦</span>
+        <span class="mono">Express.js</span><span class="ticker-dot">✦</span>
+        <span class="mono">JavaScript</span><span class="ticker-dot">✦</span>
+        <span class="mono">Java</span><span class="ticker-dot">✦</span>
+        <span class="mono">Python</span><span class="ticker-dot">✦</span>
+        <span class="mono">MySQL</span><span class="ticker-dot">✦</span>
+        <span class="mono">C++</span><span class="ticker-dot">✦</span>
+        <span class="mono">REST APIs</span><span class="ticker-dot">✦</span>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">⚡</div>
+        <div class="skill-name">Frontend</div>
+        <div class="skill-tags">
+          <span>React.js</span><span>JavaScript (ES6+)</span><span>HTML5</span><span>CSS3</span><span>Java Swing</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🔧</div>
+        <div class="skill-name">Backend</div>
+        <div class="skill-tags">
+          <span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>Java</span><span>Python</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🗄️</div>
+        <div class="skill-name">Database</div>
+        <div class="skill-tags">
+          <span>MongoDB</span><span>MySQL</span><span>Schema Design</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🛠️</div>
+        <div class="skill-name">Tools & Security</div>
+        <div class="skill-tags">
+          <span>Nmap</span><span>Kali Linux</span><span>Wireshark</span><span>FTK Imager</span><span>Git & GitHub</span><span>Postman</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label mono">03 — Work</div>
+    <h2 class="section-heading">Selected<br/><em>projects</em></h2>
+
+    <div class="projects-list">
+      <div class="project-item reveal" data-num="01">
+        <div class="project-meta">
+          <span class="mono project-num">01</span>
+          <div class="project-tags-row">
+            <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Telemedicine Access for Rural Healthcare</h3>
+          <p class="project-desc">Smart Doctor–Client Appointment & Prescription Management System to streamline scheduling, consultation tracking, and secure digital prescription handling for rural healthcare in Nabha.</p>
+          <a href="https://github.com/jalaj0011" class="project-link mono" target="_blank">View Project →</a>
+        </div>
+        <div class="project-visual-wrap">
+          <canvas class="project-canvas" data-index="0"></canvas>
+        </div>
+      </div>
+
+      <div class="project-item reveal" data-num="02">
+        <div class="project-meta">
+          <span class="mono project-num">02</span>
+          <div class="project-tags-row">
+            <span class="ptag">Python</span><span class="ptag">NLP</span><span class="ptag">React</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">AI Public Speaking Trainer</h3>
+          <p class="project-desc">Innovative AI chatbot that personalises public speaking training with adaptive algorithms, voice recognition for real-time feedback, progress tracking, and scenario simulations like presentations and interviews.</p>
+          <a href="https://github.com/jalaj0011" class="project-link mono" target="_blank">View Project →</a>
+        </div>
+        <div class="project-visual-wrap">
+          <canvas class="project-canvas" data-index="1"></canvas>
+        </div>
+      </div>
+
+      <div class="project-item reveal" data-num="03">
+        <div class="project-meta">
+          <span class="mono project-num">03</span>
+          <div class="project-tags-row">
+            <span class="ptag">React</span><span class="ptag">Express</span><span class="ptag">MongoDB</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Government Complaint Management System</h3>
+          <p class="project-desc">Secure role-based platform enabling citizens to register grievances with automated routing to authorities, structured complaint tracking, status monitoring, and escalation mechanisms for full transparency.</p>
+          <a href="https://github.com/jalaj0011" class="project-link mono" target="_blank">View Project →</a>
+        </div>
+        <div class="project-visual-wrap">
+          <canvas class="project-canvas" data-index="2"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="section-label mono">04 — Credentials</div>
+    <h2 class="section-heading">Certificates &amp;<br/><em>achievements</em></h2>
+
+    <div class="certs-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-shimmer"></div>
+        <div class="cert-top">
+          <div class="cert-badge">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="currentColor">✦</text>
+            </svg>
+          </div>
+          <div class="cert-issuer mono">Coursera · Google</div>
+        </div>
+        <div class="cert-title">Bits &amp; Bytes of Computer Networking</div>
+        <div class="cert-meta">
+          <span class="cert-org">Google · Coursera</span>
+          <span class="cert-date mono">Nov 2025</span>
+        </div>
+        <a href="https://drive.google.com/file/d/187KmL-I9AEBbrdLfm-lY8oV3yfvyGTfK/view?usp=drivesdk" target="_blank" rel="noopener" class="cert-btn mono">
+          View Certificate <span class="cert-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-shimmer"></div>
+        <div class="cert-top">
+          <div class="cert-badge">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="currentColor">✦</text>
+            </svg>
+          </div>
+          <div class="cert-issuer mono">Mindluster</div>
+        </div>
+        <div class="cert-title">Time Management Skills</div>
+        <div class="cert-meta">
+          <span class="cert-org">Mindluster</span>
+          <span class="cert-date mono">Jul 2025</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1tW0QExs9BlftunJRoFl4WPWpv-DzF8jw/view?usp=drive_link" target="_blank" rel="noopener" class="cert-btn mono">
+          View Certificate <span class="cert-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-shimmer"></div>
+        <div class="cert-top">
+          <div class="cert-badge">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="currentColor">✦</text>
+            </svg>
+          </div>
+          <div class="cert-issuer mono">Infosys Springboard</div>
+        </div>
+        <div class="cert-title">Python Programming</div>
+        <div class="cert-meta">
+          <span class="cert-org">Infosys Springboard</span>
+          <span class="cert-date mono">Mar 2024</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1vwyy8ZQBMqqaupeonG7FGCGAmdYHjjOh/view?usp=drivesdk" target="_blank" rel="noopener" class="cert-btn mono">
+          View Certificate <span class="cert-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-shimmer"></div>
+        <div class="cert-top">
+          <div class="cert-badge">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="currentColor">✦</text>
+            </svg>
+          </div>
+          <div class="cert-issuer mono">CSE Pathshala</div>
+        </div>
+        <div class="cert-title">C++ Programming: OOP's and DSA</div>
+        <div class="cert-meta">
+          <span class="cert-org">CSE Pathshala · Summer Training</span>
+          <span class="cert-date mono">Jun – Jul 2025</span>
+        </div>
+        <a href="https://drive.google.com/file/d/16NRFGjIHzXoedTy8ApH1L7QZIHSQJg2-/view?usp=drivesdk" target="_blank" rel="noopener" class="cert-btn mono">
+          View Certificate <span class="cert-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-shimmer"></div>
+        <div class="cert-top">
+          <div class="cert-badge">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="14" fill="currentColor">✦</text>
+            </svg>
+          </div>
+          <div class="cert-issuer mono">Infosys Springboard</div>
+        </div>
+        <div class="cert-title">Generative AI for All</div>
+        <div class="cert-meta">
+          <span class="cert-org">Infosys Springboard</span>
+          <span class="cert-date mono">Jan 2026</span>
+        </div>
+        <a href="https://drive.google.com/file/d/1Au7MBSVTs-fZLFr0jl3q86HL2LhocNF9/view?usp=drivesdk" target="_blank" rel="noopener" class="cert-btn mono">
+          View Certificate <span class="cert-arrow">↗</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-label mono">05 — Education</div>
+    <h2 class="section-heading">Academic<br/><em>journey</em></h2>
+
+    <div class="edu-timeline">
+      <div class="edu-item reveal">
+        <div class="edu-dot"></div>
+        <div class="edu-year mono">2023 – 2027</div>
+        <div class="edu-body">
+          <div class="edu-degree">B.Tech — Computer Science & Engineering</div>
+          <div class="edu-school">Lovely Professional University</div>
+          <div class="edu-loc mono">Phagwara, Punjab</div>
+          <div class="edu-score">CGPA: 6.5</div>
+        </div>
+      </div>
+      <div class="edu-item reveal">
+        <div class="edu-dot"></div>
+        <div class="edu-year mono">2022 – 2023</div>
+        <div class="edu-body">
+          <div class="edu-degree">Senior Secondary (12th) — PCM</div>
+          <div class="edu-school">Bits International School</div>
+          <div class="edu-loc mono">Haryana</div>
+          <div class="edu-score">70%</div>
+        </div>
+      </div>
+      <div class="edu-item reveal">
+        <div class="edu-dot"></div>
+        <div class="edu-year mono">2020 – 2021</div>
+        <div class="edu-body">
+          <div class="edu-degree">Matriculation (10th)</div>
+          <div class="edu-school">Halwasiya Vidya Vihar</div>
+          <div class="edu-loc mono">Bhiwani, Haryana</div>
+          <div class="edu-score">75%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <canvas id="contact-canvas"></canvas>
+    <div class="contact-inner">
+      <div class="section-label mono">06 — Contact</div>
+      <h2 class="contact-heading">Let's build<br/><em>something great</em></h2>
+      <p class="contact-sub">Open to internships, freelance projects, and full-time opportunities.</p>
+      <a href="mailto:parmarjalaj340@gmail.com" class="contact-email-link">
+        parmarjalaj340@gmail.com
+        <span class="email-arrow">↗</span>
+      </a>
+      <div class="contact-links">
+        <a href="https://github.com/jalaj0011" target="_blank" class="clink mono">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/jalaj-parmar0/" target="_blank" class="clink mono">LinkedIn ↗</a>
+        <a href="tel:+918307128596" class="clink mono">+91 83071 28596</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono">© 2025 Jalaj Parmar</span>
+    <span class="mono">Fullstack Developer · LPU · Built with Three.js + Vite</span>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
